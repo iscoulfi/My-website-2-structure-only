@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../public/images/main.png);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8%;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  color: #fff;
+  font-size: 18px;
+
+  font-weight: 600;
+  padding: 10px 50px;
+  transition: 0.42s;
+}
+
+.icon {
+  color: #fff;
+  font-size: 30px;
+  transition: all 0.42s ease;
+}
+
+.icon:hover {
+  /* transform: translateY(-3px);
+  color: rgb(139, 139, 139); */
+  cursor: pointer;
+  z-index: 101;
+}
+
+section {
+  padding: 0 12%;
+}
+.home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 10px 3%;
+    transition: 0.3s;
+  }
+}
+
+@media (max-width: 785px) {
+  nav {
+    position: absolute;
+    top: 100%;
+    right: -200%;
+    width: 250px;
+    height: 35vh;
+    padding: 0 0 20px;
+    background: rgb(28, 28, 28);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all 0.42s;
+  }
+
+  .open {
+    right: 2%;
+  }
+}
